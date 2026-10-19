@@ -1,0 +1,370 @@
+/* RESET GENERALE*/
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* STILE DEL BODY */
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #242424;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+ul {
+    list-style:none;
+}
+
+/* HEADER E NAVIGAZIONE TOP */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width:1200px;
+    margin: 0 auto; /*header centrato orizzontalmente*/
+    padding: 20px 30px;
+    border-bottom: 1px solid black;
+}
+
+/* DIMENSIONI LOGO */
+
+.logoimg {
+    width: 180px;
+    height: auto; /*mantiene le dimensioni originali dell'immagine*/
+    display: block; /*comportati come elemento blocco*/
+    margin: -15px;
+}
+
+/* MENù NAV */
+
+.menutop {
+    display:flex; /*dispone tutti gli elementi dell'header in linea*/
+    align-items: center;
+    gap: 20px;
+}
+
+.menutop ul {
+    display:flex; /*disponme le 3 icone orizzontalmente*/
+    align-items: center;
+    gap: 20px;
+}
+ .menutop li {
+    font-size: 22px;
+ }
+
+ /* PULSANTE MEMBERSHIP */
+
+ .menutop button {
+    background-color: white;
+    border:1px solid black;
+    border-radius: 15px;
+    padding: 7px 12px;
+    font-size: 12px;
+    cursor:pointer; /* cursore a forma di mano al passaggio del mouse*/
+ }
+
+/* IMG PROFILO */
+
+.profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover; /* riempie lo spazio disponibile ritagliando l'immagine, senza deformarla.*/
+
+}
+
+/* LEYOUT PRINCIPALE CON FLEXBOX*/
+
+main{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start; /* allinea le due colonne in alto, senza costringerle ad avere la stessa altezza. */
+}
+
+/* COLONNA SX - NOTIZIE*/
+
+.notizie {
+    flex: 2; /* significa che deve avere 2 colonne*/
+    min-width: 0; /* il contenuto può restringersi senza limiti */ 
+    padding: 30px;
+}
+
+/* COLONNA DX - SIDEBAR */
+
+.sidebar {
+    flex: 1; /* significa che deve avere 1 colonna */
+    min-width: 0;
+    padding: 30px;
+    border-left: 1px solid black;
+}
+
+/* MENU SUPERIORE DELLE NOTIZIE */
+.pagine {
+    display:flex;
+    gap: 25px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.pagine a {
+    font-size: 12px;
+    color: #757575;
+}
+
+.pagine .active {
+    color: #242424;
+    font-weight: bold;
+    border-bottom: 2px solid #242424;
+    padding-bottom: 15px;
+    margin-bottom: -16px;
+}
+
+/* CARD ARTICOLI */
+
+.news {
+    display: flex;
+    flex-direction: column; /* da specificare, perchè flexbox di default utilizza row */
+}
+
+/* STRUTTURA DELLA CARD */
+
+.news-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    border-bottom: 1px solid gray;
+}
+
+/* TESTO DELLE CARD */
+
+.news-text {
+    flex: 1;
+    min-width: none;
+}
+
+/* IMG DELL'ARTICOLO*/
+
+.news-img {
+    width: 180px;
+    height: 130px;
+    object-fit: cover;
+}
+
+/* AUTORE*/
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.author img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 4px;
+}
+
+/* TITOLO ARTICOLO */
+
+.news-tex h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+/* descrizione */
+
+.description {
+    font-size: 14px;
+    color: #757575;
+    margin-bottom:10px;
+}
+
+/* INFO art */
+
+.news-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* manda gli elementi su una seconda riga quando non c'è più spazio*/
+    gap: 7px;
+    font-size: 12px;
+    color: #757575;
+}
+
+/* ETICHETTA CATEGORIA */
+
+.news-info .tag {
+    background-color:#f2f2f2;
+    padding: 5px 10px;
+    border-radius: 20px; 
+}
+
+/*SIDEBAR */
+
+/* BOX TWITTER */
+
+.twitter {
+    display: flex;
+    flex-direction: column; /* abbiamo messo gli lementi uno sotto l'altro */
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.twitter p {
+    font-size: 14px;
+}
+
+.twitter button {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.twitter a {
+    color: #757575;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+
+/* ARGOMENTI CONSIGLIATI */
+
+.reccomended-topics {
+    margin-bottom: 40px;
+}
+
+.reccomended-topics h3 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.topics {
+    display: flex;
+    flex-wrap: wrap; /*quando le etichette non entrano più sulla stessa riga, passano automaticamente alla riga successiva.*/
+    gap: 10px;
+}
+
+.topics span {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 12px;
+}
+
+
+/* PROFILI DA SEGUIRE */
+
+.who-to-follow {
+    margin-bottom: 40px;
+}
+
+.who-to-follow h3 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-text strong {
+    font-size: 13px;
+}
+
+.profile-text p {
+    font-size: 11px;
+    color: #757575;
+}
+
+.profile button {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+
+/* ARTICOLI SALVATI */
+
+.recently-saved {
+    margin-bottom: 40px;
+}
+
+.recently-saved h3 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.saved-article {
+    margin-bottom: 20px;
+}
+
+.saved-author {
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.saved-article h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.saved-info {
+    font-size: 11px;
+    color: #757575;
+}
+
+.see-all {
+    font-size: 12px;
+    color: #1a8917;
+}
+
+
+/* LINK FINALI */
+
+.bottom-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.bottom-nav a {
+    font-size: 11px;
+    color: #757575;
+}
+
+/*FINE*/
